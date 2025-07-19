@@ -1,24 +1,193 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
-    <style>
-        h1{
-            color: red;
-        }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online - Vista Previa</title>
 
-        p{
-            color: green;
-        }
-    </style>
+    <!-- Enlaces a los mismos archivos CSS que usas actualmente -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="estilos/temas.css">
+    <link rel="stylesheet" href="estilos/pagina-principal/estilosPrincipalTema.css">
+    <link rel="stylesheet" href="estilos/pagina-principal/estilos1200.css">
+    <link rel="stylesheet" href="estilos/pagina-principal/estilos992.css">
+    <link rel="stylesheet" href="estilos/pagina-principal/estilos768.css">
+    <link rel="stylesheet" href="estilos/pagina-principal/estilos480.css">
+    <link rel="stylesheet" href="estilos/pagina-principal/loader.css">
+    <link rel="stylesheet" href="estilos/colores.css">
 </head>
 <body>
-    <h1>Esto es un ejemplo de pagiana de github</h1>
-    <p> pagina de git</p>
+
+    <!-- Fondo animado y pantalla de carga (se mantienen) -->
+    <div id="animation-container"></div>
+    <div id="pantalla-carga">
+        <img class="logo-loader" src="imagenes/logo.png" alt="Cargando...">
+    </div>
+    
+    <!-- La estructura del body ahora es puro HTML -->
+    <header class="barra-superior">
+        <div class="segunda-barra">
+            <img class="logo" src="icon/logo-nuevo.png" alt="Logo de la tienda">
+            <button class="boton-nav" aria-label="Toggle menu" aria-expanded="false">
+                <div class="barra-nav barra-1"></div>
+                <div class="barra-nav barra-2"></div>
+                <div class="barra-nav barra-3"></div>
+            </button>
+            <div class="mobile-menu">
+                <ul>
+                    <li><a href="#">Acerca</a></li>
+                    <li><a href="#">Contactos</a></li>
+                    <li><a href="#">Más vendidos</a></li>
+                    <li><a href="#">Recientes</a></li>
+                </ul>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#">Acerca</a></li>
+                <li><a href="#">Contactos</a></li>
+                <li><a href="#">Más vendidos</a></li>
+                <li><a href="#">Recientes</a></li>
+            </ul>
+            <a href="tienda.html"><img class="carrito" src="icon/carrito.svg"></a>
+            <div class="busqueda">
+                <input class="entrada" placeholder="Buscar productos...">
+                <img src="icon/icono-buscar.svg" alt="Buscar">
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="categories-container">
+            <!-- INICIO DEL CONTENIDO ESTÁTICO (reemplaza el bucle PHP) -->
+            
+            <!-- Tarjeta 1 -->
+            <a class="category-card" href="tienda.html">
+                <img src="imagenes/ropa.png" alt="Ropa" class="category-image">
+                <div class="category-info">
+                    <h3 class="category-title">Ropa</h3>
+                    <p class="category-count">89 productos</p>
+                </div>
+            </a>
+            
+            <!-- Tarjeta 2 -->
+            <a class="category-card" href="tienda.html">
+                <img src="imagenes/electrodomesticos.png" alt="Electrodomésticos" class="category-image">
+                <div class="category-info">
+                    <h3 class="category-title">Electrodomésticos</h3>
+                    <p class="category-count">76 productos</p>
+                </div>
+            </a>
+            
+            <!-- Tarjeta 3 -->
+            <a class="category-card" href="tienda.html">
+                <img src="imagenes/electronica.png" alt="Electrónica" class="category-image">
+                <div class="category-info">
+                    <h3 class="category-title">Electrónica</h3>
+                    <p class="category-count">64 productos</p>
+                </div>
+            </a>
+            
+            <!-- Tarjeta 4 -->
+            <a class="category-card" href="tienda.html">
+                <img src="imagenes/alimentos.png" alt="Alimentos" class="category-image">
+                <div class="category-info">
+                    <h3 class="category-title">Alimentos</h3>
+                    <p class="category-count">53 productos</p>
+                </div>
+            </a>
+            
+            <!-- Tarjeta 5 -->
+            <a class="category-card" href="tienda.html">
+                <img src="imagenes/cosmetica.png" alt="Cosmética" class="category-image">
+                <div class="category-info">
+                    <h3 class="category-title">Cosmética</h3>
+                    <p class="category-count">47 productos</p>
+                </div>
+            </a>
+            
+            <!-- Tarjeta 6 -->
+            <a class="category-card" href="tienda.html">
+                <img src="imagenes/medicamentos.png" alt="Medicamentos" class="category-image">
+                <div class="category-info">
+                    <h3 class="category-title">Medicamentos</h3>
+                    <p class="category-count">112 productos</p>
+                </div>
+            </a>
+            
+            <!-- Tarjeta 7 -->
+            <a class="category-card" href="tienda.html">
+                <img src="imagenes/muebles.png" alt="Muebles" class="category-image">
+                <div class="category-info">
+                    <h3 class="category-title">Muebles</h3>
+                    <p class="category-count">68 productos</p>
+                </div>
+            </a>
+            
+            <!-- Tarjeta 8 (Ejemplo adicional) -->
+            <a class="category-card" href="tienda.html">
+                <img src="imagenes/aseo-personal.png" alt="Aseo Personal" class="category-image">
+                <div class="category-info">
+                    <h3 class="category-title">Aseo Personal</h3>
+                    <p class="category-count">42 productos</p>
+                </div>
+            </a>
+
+            <!-- FIN DEL CONTENIDO ESTÁTICO -->
+        </div>
+    </div>
+
+    <!-- El resto de las secciones (about, promo, productos, etc.) ya eran estáticas, así que se mantienen igual -->
+    <section class="about-section">
+        <!-- ... tu sección sobre nosotros ... -->
+    </section>
+    
+    <section class="promo-section">
+        <!-- ... tu sección de promociones ... -->
+    </section>
+
+    <section class="seccion-productos">
+        <!-- ... tu sección de productos destacados ... -->
+    </section>
+    
+    <section class="seccion-descuentos">
+        <!-- ... tu sección de descuentos ... -->
+    </section>
+
+    <section class="seccion-productos">
+        <!-- ... tu sección de últimos productos ... -->
+    </section>
+    
+    <section class="seccion-banner-coleccion">
+        <!-- ... tu banner de colección ... -->
+    </section>
+
+    <section class="seccion-testimonios">
+        <!-- ... tu sección de testimonios ... -->
+    </section>
+
+    <footer class="pie-de-pagina">
+        <!-- ... tu footer ... -->
+    </footer>
+
+    <!-- Scripts de JavaScript (se mantienen) -->
+    <script>
+        // Lógica para la pantalla de carga
+        window.onload = function() {
+            document.getElementById('pantalla-carga').classList.add('oculto');
+        };
+
+        // Lógica para el menú móvil
+        const botonNav = document.querySelector('.boton-nav');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        if (botonNav && mobileMenu) {
+            botonNav.addEventListener('click', function() {
+                mobileMenu.classList.toggle('active');
+                this.classList.toggle('active');
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', !isExpanded);
+            });
+        }
+    </script>
+    <script src="script/fondo.js"></script>
+    <script src="script/temp.js"></script>
 </body>
 </html>
