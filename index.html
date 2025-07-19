@@ -1,38 +1,50 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda Online - Vista Previa</title>
+    <title>tu maletín - Vista Previa</title>
+    <meta name="theme-color" content="#646664">
 
-    <!-- Enlaces a los mismos archivos CSS que usas actualmente -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="estilos/temas.css">
     <link rel="stylesheet" href="estilos/pagina-principal/estilosPrincipalTema.css">
     <link rel="stylesheet" href="estilos/pagina-principal/estilos1200.css">
     <link rel="stylesheet" href="estilos/pagina-principal/estilos992.css">
     <link rel="stylesheet" href="estilos/pagina-principal/estilos768.css">
     <link rel="stylesheet" href="estilos/pagina-principal/estilos480.css">
-    <link rel="stylesheet" href="estilos/pagina-principal/loader.css">
+    <link rel="stylesheet" href="estilos/loader.css">
     <link rel="stylesheet" href="estilos/colores.css">
-</head>
-<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <!-- Fondo animado y pantalla de carga (se mantienen) -->
+
+    <!--fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- necesario para el fondo -->
     <div id="animation-container"></div>
+
+    <!-- NUEVO: Pantalla de carga -->
     <div id="pantalla-carga">
-        <img class="logo-loader" src="imagenes/logo.png" alt="Cargando...">
+        <img class="logo-loader" src="imagenes/avion-carga.png" alt="Cargando...">
     </div>
-    
-    <!-- La estructura del body ahora es puro HTML -->
+    <!-- FIN de la Pantalla de carga -->
+
     <header class="barra-superior">
         <div class="segunda-barra">
-            <img class="logo" src="icon/logo-nuevo.png" alt="Logo de la tienda">
+            <a href="index-es.html"><img class="logo" src="icon/logo-nuevo.png" alt="Logo de la tienda"></a>
+
             <button class="boton-nav" aria-label="Toggle menu" aria-expanded="false">
                 <div class="barra-nav barra-1"></div>
                 <div class="barra-nav barra-2"></div>
                 <div class="barra-nav barra-3"></div>
             </button>
+
             <div class="mobile-menu">
                 <ul>
                     <li><a href="#">Acerca</a></li>
@@ -41,13 +53,16 @@
                     <li><a href="#">Recientes</a></li>
                 </ul>
             </div>
+
             <ul class="nav-menu">
                 <li><a href="#">Acerca</a></li>
                 <li><a href="#">Contactos</a></li>
                 <li><a href="#">Más vendidos</a></li>
                 <li><a href="#">Recientes</a></li>
             </ul>
+
             <a href="tienda.html"><img class="carrito" src="icon/carrito.svg"></a>
+
             <div class="busqueda">
                 <input class="entrada" placeholder="Buscar productos...">
                 <img src="icon/icono-buscar.svg" alt="Buscar">
@@ -55,56 +70,54 @@
         </div>
     </header>
 
+    <!-- ====================================================== -->
+    <!-- seccion de categorias de productos -->
+    <!-- ====================================================== -->
     <div class="container">
         <div class="categories-container">
             <!-- INICIO DEL CONTENIDO ESTÁTICO (reemplaza el bucle PHP) -->
-            
-            <!-- Tarjeta 1 -->
             <a class="category-card" href="tienda.html">
-                <img src="imagenes/ropa.png" alt="Ropa" class="category-image">
+                <img src="imagenes/caja-carton.png" alt="Todos los productos" class="category-image">
+                <div class="category-info">
+                    <h3 class="category-title">Todos los productos</h3>
+                    <p class="category-count">125 productos</p>
+                </div>
+            </a>
+            <a class="category-card" href="tienda.html">
+                <img src="imagenes/camiceta-bien.png" alt="Ropa" class="category-image">
                 <div class="category-info">
                     <h3 class="category-title">Ropa</h3>
                     <p class="category-count">89 productos</p>
                 </div>
             </a>
-            
-            <!-- Tarjeta 2 -->
             <a class="category-card" href="tienda.html">
-                <img src="imagenes/electrodomesticos.png" alt="Electrodomésticos" class="category-image">
+                <img src="imagenes/refrigerador.png" alt="Electrodomésticos" class="category-image">
                 <div class="category-info">
                     <h3 class="category-title">Electrodomésticos</h3>
                     <p class="category-count">76 productos</p>
                 </div>
             </a>
-            
-            <!-- Tarjeta 3 -->
             <a class="category-card" href="tienda.html">
-                <img src="imagenes/electronica.png" alt="Electrónica" class="category-image">
+                <img src="imagenes/dispositivos.png" alt="Electrónica" class="category-image">
                 <div class="category-info">
                     <h3 class="category-title">Electrónica</h3>
                     <p class="category-count">64 productos</p>
                 </div>
             </a>
-            
-            <!-- Tarjeta 4 -->
             <a class="category-card" href="tienda.html">
-                <img src="imagenes/alimentos.png" alt="Alimentos" class="category-image">
+                <img src="imagenes/lata.png" alt="Alimentos" class="category-image">
                 <div class="category-info">
                     <h3 class="category-title">Alimentos</h3>
                     <p class="category-count">53 productos</p>
                 </div>
             </a>
-            
-            <!-- Tarjeta 5 -->
             <a class="category-card" href="tienda.html">
-                <img src="imagenes/cosmetica.png" alt="Cosmética" class="category-image">
+                <img src="imagenes/perfume.png" alt="Cosmética" class="category-image">
                 <div class="category-info">
                     <h3 class="category-title">Cosmética</h3>
                     <p class="category-count">47 productos</p>
                 </div>
             </a>
-            
-            <!-- Tarjeta 6 -->
             <a class="category-card" href="tienda.html">
                 <img src="imagenes/medicamentos.png" alt="Medicamentos" class="category-image">
                 <div class="category-info">
@@ -112,73 +125,482 @@
                     <p class="category-count">112 productos</p>
                 </div>
             </a>
-            
-            <!-- Tarjeta 7 -->
             <a class="category-card" href="tienda.html">
-                <img src="imagenes/muebles.png" alt="Muebles" class="category-image">
+                <img src="imagenes/mueble.png" alt="Muebles" class="category-image">
                 <div class="category-info">
                     <h3 class="category-title">Muebles</h3>
                     <p class="category-count">68 productos</p>
                 </div>
             </a>
-            
-            <!-- Tarjeta 8 (Ejemplo adicional) -->
-            <a class="category-card" href="tienda.html">
-                <img src="imagenes/aseo-personal.png" alt="Aseo Personal" class="category-image">
-                <div class="category-info">
-                    <h3 class="category-title">Aseo Personal</h3>
-                    <p class="category-count">42 productos</p>
-                </div>
-            </a>
-
             <!-- FIN DEL CONTENIDO ESTÁTICO -->
         </div>
     </div>
 
-    <!-- El resto de las secciones (about, promo, productos, etc.) ya eran estáticas, así que se mantienen igual -->
+    <!-- ====================================================== -->
+    <!-- seccion sobre nosotros -->
+    <!-- ====================================================== -->
     <section class="about-section">
-        <!-- ... tu sección sobre nosotros ... -->
+        <div class="about-container">
+            <div class="about-text-content">
+                <p class="trusted-by">
+                    <i class="fas fa-shield-alt"></i> De confianza en Cuba y Estados Unidos
+                </p>
+                <h2 class="about-heading">
+                    De Nebraska a Cuba: <span class="highlight-text">Tu Maletín,</span> Hasta la puerta de tu casa.
+                </h2>
+                <p class="about-description">
+                    Tienda de productos de toda clase con alcance en todo el estado de Nebraska y envíos a Cuba.
+                </p>
+                <div class="benefits-list">
+                    <div class="benefit-item"><i class="fas fa-check-circle"></i> Envío gratis a partir de 20$ en compra</div>
+                    <div class="benefit-item"><i class="fas fa-check-circle"></i> Aceptamos devoluciones</div>
+                    <div class="benefit-item"><i class="fas fa-check-circle"></i> Productos en garantía</div>
+                    <div class="benefit-item"><i class="fas fa-check-circle"></i> Atención 24/7</div>
+                </div>
+                <div class="cta-area">
+                    <a href="tienda.html" class="shop-now-btn">Comprar ahora</a>
+                    <a href="#" class="shop-now-btn">Más información</a>
+                    <a href="tel:+3088509597" class="contact-phone-link">
+                        <i class="fas fa-phone-alt"></i> +3088509497
+                    </a>
+                </div>
+            </div>
+            <div class="image-collage-container">
+                <img src="imagenes/collage1.jpg" alt="Varios productos" class="collage-img img-1">
+                <img src="imagenes/collage2.jpg" alt="Varios productos" class="collage-img img-2">
+                <img src="imagenes/collage3.jpg" alt="Varios productos" class="collage-img img-3">
+            </div>
+        </div>
     </section>
-    
+
+    <!-- ==================================================================== -->
+    <!--             NUEVA SECCIÓN DE OFERTAS PROMOCIONALES                 -->
+    <!-- ==================================================================== -->
     <section class="promo-section">
-        <!-- ... tu sección de promociones ... -->
+        <div class="promo-grid">
+            <article class="promo-card card-1 bg-blue">
+                <div class="promo-image-container">
+                    <img src="imagenes/banndia1.png" alt="Tienda física">
+                </div>
+                <div class="promo-text">
+                    <p class="promo-subtitle">Tienda física</p>
+                    <h3 class="promo-title">Adquiera los mejores productos en nuestra tienda física</h3>
+                    <a href="#" class="promo-btn">Contactar</a>
+                </div>
+            </article>
+            <article class="promo-card card-2 bg-yellow">
+                <iframe class="mapa" width="100%" height="100%" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-104.99,41.24,-95.31,43.00&layer=mapnik&marker=42.46,-96.41" title="Mapa de ubicación"></iframe>
+            </article>
+            <article class="promo-card card-3 bg-blue">
+                <div class="promo-text">
+                    <p class="promo-subtitle">Programa de envíos</p>
+                    <h3 class="promo-title">Contactanos y recibe tus productos en pocos días</h3>
+                    <a href="#" class="promo-btn">Contactar</a>
+                </div>
+                <div class="promo-image-container-full">
+                    <img src="imagenes/caja-carton.png" alt="Caja de envío">
+                </div>
+            </article>
+            <article class="promo-card card-4 bg-yellow">
+                <div class="promo-text">
+                    <p class="promo-subtitle">Avión</p>
+                    <h3 class="promo-title">Envía la libra en avión por $9</h3>
+                </div>
+                <div class="promo-image-container">
+                    <img src="imagenes/avion.png" alt="Avión de carga">
+                </div>
+            </article>
+            <article class="promo-card card-5 bg-yellow">
+                <div class="promo-text">
+                    <p class="promo-subtitle">Barco</p>
+                    <h3 class="promo-title">Envía la libra en barco por $3.5</h3>
+                </div>
+                <div class="promo-image-container">
+                    <img src="imagenes/barco.png" alt="Barco de carga">
+                </div>
+            </article>
+        </div>
     </section>
 
+    <!-- ====================================================== -->
+    <!--         SECCIÓN DE PRODUCTOS DESTACADOS              -->
+    <!-- ====================================================== -->
     <section class="seccion-productos">
-        <!-- ... tu sección de productos destacados ... -->
+        <h2 class="titulo-seccion">Productos destacados</h2>
+        <div class="contenedor-tarjetas">
+            <a href="#" class="tarjeta-producto">
+                <div class="imagen-producto-contenedor">
+                    <img src="imagenes/producto-ejemplo.png" alt="Producto Ejemplo 1">
+                </div>
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Producto Ejemplo 1</h3>
+                    <p class="categoria-producto">Electrónica</p>
+                    <hr class="separador-tarjeta">
+                    <div class="precio-producto">
+                        <span class="etiqueta-precio">Precio</span>
+                        <span class="valor-precio">$19.99</span>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="tarjeta-producto">
+                <div class="imagen-producto-contenedor">
+                    <img src="imagenes/producto-ejemplo.png" alt="Producto Ejemplo 2">
+                </div>
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Producto Ejemplo 2</h3>
+                    <p class="categoria-producto">Ropa</p>
+                    <hr class="separador-tarjeta">
+                    <div class="precio-producto">
+                        <span class="etiqueta-precio">Precio</span>
+                        <span class="valor-precio">$25.50</span>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="tarjeta-producto">
+                <div class="imagen-producto-contenedor">
+                    <img src="imagenes/producto-ejemplo.png" alt="Producto Ejemplo 3">
+                </div>
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Producto Ejemplo 3</h3>
+                    <p class="categoria-producto">Hogar</p>
+                    <hr class="separador-tarjeta">
+                    <div class="precio-producto">
+                        <span class="etiqueta-precio">Precio</span>
+                        <span class="valor-precio">$45.00</span>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="tarjeta-producto">
+                <div class="imagen-producto-contenedor">
+                    <img src="imagenes/producto-ejemplo.png" alt="Producto Ejemplo 4">
+                </div>
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Producto Ejemplo 4</h3>
+                    <p class="categoria-producto">Alimentos</p>
+                    <hr class="separador-tarjeta">
+                    <div class="precio-producto">
+                        <span class="etiqueta-precio">Precio</span>
+                        <span class="valor-precio">$5.99</span>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="tarjeta-producto">
+                <div class="imagen-producto-contenedor">
+                    <img src="imagenes/producto-ejemplo.png" alt="Producto Ejemplo 5 con descuento">
+                </div>
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Producto Ejemplo 5</h3>
+                    <p class="categoria-producto">Cosmética</p>
+                    <hr class="separador-tarjeta">
+                    <div class="precio-producto">
+                        <span class="etiqueta-precio">Precio</span>
+                        <span class="valor-precio">
+                            <del class="precio-original">$30.00</del>
+                            <span class="precio-descuento">$22.00</span>
+                        </span>
+                    </div>
+                </div>
+            </a>
+        </div>
     </section>
-    
+
+    <!-- ====================================================== -->
+    <!--             SECCIÓN DE OFERTAS Y DESCUENTOS            -->
+    <!-- ====================================================== -->
     <section class="seccion-descuentos">
-        <!-- ... tu sección de descuentos ... -->
+        <div class="contenedor-descuentos">
+            <div class="banner-promo">
+                <div class="contenido-banner">
+                    <p class="subtitulo-promo">Tiempo límite de productos en oferta</p>
+                    <h2 class="titulo-promo">Todos estos productos están en descuento</h2>
+                    <div class="precio-promo">
+                        <span>Descuentos de hasta:</span>
+                        <strong class="valor-promo-precio">$45.00</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="columna-derecha-descuentos">
+                <div class="barra-temporizador">
+                    <div class="segmento-tiempo">
+                        <span id="dias" class="numero-tiempo">00</span>
+                        <span class="etiqueta-tiempo">Días</span>
+                    </div>
+                    <div class="segmento-tiempo">
+                        <span id="horas" class="numero-tiempo">00</span>
+                        <span class="etiqueta-tiempo">Horas</span>
+                    </div>
+                    <div class="segmento-tiempo">
+                        <span id="minutos" class="numero-tiempo">00</span>
+                        <span class="etiqueta-tiempo">Minutos</span>
+                    </div>
+                    <div class="segmento-tiempo">
+                        <span id="segundos" class="numero-tiempo">00</span>
+                        <span class="etiqueta-tiempo">Segundos</span>
+                    </div>
+                </div>
+                <div class="contenedor-tarjetas">
+                    <a href="#" class="tarjeta-producto">
+                        <div class="imagen-producto-contenedor">
+                            <img src="imagenes/producto-ejemplo.png" alt="Producto en oferta 1">
+                        </div>
+                        <div class="info-producto">
+                            <p class="categoria-producto">Electrónica</p>
+                            <h3 class="nombre-producto">Producto en Oferta 1</h3>
+                            <div class="precio-producto">
+                                <span class="valor-precio">
+                                    <del class="precio-original">$75.00</del>
+                                    <span class="precio-descuento">$45.00</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="tarjeta-producto">
+                        <div class="imagen-producto-contenedor">
+                            <img src="imagenes/producto-ejemplo.png" alt="Producto en oferta 2">
+                        </div>
+                        <div class="info-producto">
+                            <p class="categoria-producto">Hogar</p>
+                            <h3 class="nombre-producto">Producto en Oferta 2</h3>
+                            <div class="precio-producto">
+                                <span class="valor-precio">
+                                    <del class="precio-original">$55.00</del>
+                                    <span class="precio-descuento">$42.00</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="tarjeta-producto">
+                        <div class="imagen-producto-contenedor">
+                            <img src="imagenes/producto-ejemplo.png" alt="Producto en oferta 3">
+                        </div>
+                        <div class="info-producto">
+                            <p class="categoria-producto">Ropa</p>
+                            <h3 class="nombre-producto">Producto en Oferta 3</h3>
+                            <div class="precio-producto">
+                                <span class="valor-precio">
+                                    <del class="precio-original">$44.00</del>
+                                    <span class="precio-descuento">$28.00</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- ====================================================== -->
+    <!--      SECCIÓN DE ÚLTIMA COLECCIÓN DE PRODUCTOS          -->
+    <!-- ====================================================== -->
     <section class="seccion-productos">
-        <!-- ... tu sección de últimos productos ... -->
+        <div class="encabezado-seccion">
+            <h2 class="titulo-seccion">Últimos productos agregados</h2>
+            <a href="tienda.html" class="enlace-ver-mas">Ver Más</a>
+        </div>
+        <div class="contenedor-tarjetas">
+            <a href="#" class="tarjeta-producto">
+                <div class="imagen-producto-contenedor">
+                    <img src="imagenes/producto-ejemplo.png" alt="Producto Reciente 1">
+                </div>
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Producto Reciente 1</h3>
+                    <p class="categoria-producto">Tecnología</p>
+                    <hr class="separador-tarjeta">
+                    <div class="precio-producto">
+                        <span class="etiqueta-precio">Precio</span>
+                        <span class="valor-precio">$150.00</span>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="tarjeta-producto">
+                <div class="imagen-producto-contenedor">
+                    <img src="imagenes/producto-ejemplo.png" alt="Producto Reciente 2">
+                </div>
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Producto Reciente 2</h3>
+                    <p class="categoria-producto">Muebles</p>
+                    <hr class="separador-tarjeta">
+                    <div class="precio-producto">
+                        <span class="etiqueta-precio">Precio</span>
+                        <span class="valor-precio">$299.00</span>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="tarjeta-producto">
+                <div class="imagen-producto-contenedor">
+                    <img src="imagenes/producto-ejemplo.png" alt="Producto Reciente 3">
+                </div>
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Producto Reciente 3</h3>
+                    <p class="categoria-producto">Medicamentos</p>
+                    <hr class="separador-tarjeta">
+                    <div class="precio-producto">
+                        <span class="etiqueta-precio">Precio</span>
+                        <span class="valor-precio">$12.75</span>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="tarjeta-producto">
+                <div class="imagen-producto-contenedor">
+                    <img src="imagenes/producto-ejemplo.png" alt="Producto Reciente 4">
+                </div>
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Producto Reciente 4</h3>
+                    <p class="categoria-producto">Aseo Personal</p>
+                    <hr class="separador-tarjeta">
+                    <div class="precio-producto">
+                        <span class="etiqueta-precio">Precio</span>
+                        <span class="valor-precio">$8.00</span>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="tarjeta-producto">
+                <div class="imagen-producto-contenedor">
+                    <img src="imagenes/producto-ejemplo.png" alt="Producto Reciente 5">
+                </div>
+                <div class="info-producto">
+                    <h3 class="nombre-producto">Producto Reciente 5</h3>
+                    <p class="categoria-producto">Ropa</p>
+                    <hr class="separador-tarjeta">
+                    <div class="precio-producto">
+                        <span class="etiqueta-precio">Precio</span>
+                        <span class="valor-precio">$35.00</span>
+                    </div>
+                </div>
+            </a>
+        </div>
     </section>
-    
+
+    <!-- ====================================================== -->
+    <!--             SECCIÓN BANNER DE COLECCIÓN                -->
+    <!-- ====================================================== -->
     <section class="seccion-banner-coleccion">
-        <!-- ... tu banner de colección ... -->
+        <div class="contenedor-banner">
+            <div class="banner-imagenes">
+                <img src="https://i.imgur.com/KxPExqM.png" alt="Colección de productos eléctricos">
+            </div>
+            <div class="banner-contenido">
+                <p class="banner-subtitulo-pequeno">Gane un porciento de descuento para grandes compras</p>
+                <h2 class="banner-titulo-principal">Colecciones de productos</h2>
+                <p class="banner-subtitulo-grande">Ofertas con Límite de Tiempo</p>
+                <a href="#" class="banner-boton">Comprar Ahora</a>
+            </div>
+        </div>
     </section>
 
+    <!-- ====================================================== -->
+    <!--                  SECCIÓN DE TESTIMONIOS                  -->
+    <!-- ====================================================== -->
     <section class="seccion-testimonios">
-        <!-- ... tu sección de testimonios ... -->
+        <div class="contenedor-testimonios">
+            <article class="tarjeta-testimonio">
+                <div class="puntuacion-estrellas">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <h3 class="titulo-testimonio">"Envío Gratuito"</h3>
+                <p class="texto-testimonio">El servicio de envío fue rápido y sin costo adicional, ¡justo lo que necesitaba! Recomiendo esta tienda a todos.</p>
+                <div class="autor-testimonio">
+                    <img src="imagenes/cliente1.jpg" alt="Foto de María G." class="foto-autor">
+                    <h4 class="nombre-autor">María G.</h4>
+                    <p class="rol-autor">Cliente Satisfecha</p>
+                </div>
+            </article>
+            <article class="tarjeta-testimonio">
+                <div class="puntuacion-estrellas">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                </div>
+                <h3 class="titulo-testimonio">"Buen Producto"</h3>
+                <p class="texto-testimonio">La calidad del producto superó mis expectativas. Definitivamente volveré a comprar aquí. ¡Muy buen servicio!</p>
+                <div class="autor-testimonio">
+                    <img src="imagenes/cliente2.jpg" alt="Foto de Juan P." class="foto-autor">
+                    <h4 class="nombre-autor">Juan P.</h4>
+                    <p class="rol-autor">Cliente Frecuente</p>
+                </div>
+            </article>
+            <article class="tarjeta-testimonio">
+                <div class="puntuacion-estrellas">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <h3 class="titulo-testimonio">"Producto Original"</h3>
+                <p class="texto-testimonio">Estaba buscando este producto por todas partes y aquí lo encontré original y a un precio excelente. ¡Gracias!</p>
+                <div class="autor-testimonio">
+                    <img src="imagenes/cliente3.jpg" alt="Foto de Ana S." class="foto-autor">
+                    <h4 class="nombre-autor">Ana S.</h4>
+                    <p class="rol-autor">Compradora Verificada</p>
+                </div>
+            </article>
+        </div>
+        <div class="paginacion-testimonios">
+            <span class="punto-paginacion activo"></span>
+            <span class="punto-paginacion"></span>
+        </div>
     </section>
 
+    <!-- ====================================================== -->
+    <!--                 PIE DE PÁGINA (FOOTER)                 -->
+    <!-- ====================================================== -->
     <footer class="pie-de-pagina">
-        <!-- ... tu footer ... -->
+        <div class="footer-principal">
+            <div class="footer-columna">
+                <h3 class="footer-titulo">Nosotros</h3>
+                <p class="footer-texto">
+                    Nos comprometemos con el cliente en prestar los mejores servicios de envíos hacia Cuba.
+                </p>
+                <div class="footer-redes-sociales">
+                    <a href="#" class="icono-social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="icono-social"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="icono-social"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="icono-social"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-columna">
+                <h3 class="footer-titulo">Secciones</h3>
+                <ul class="footer-lista-enlaces">
+                    <li><a href="#">» Información</a></li>
+                    <li><a href="#">» Ofertas y Servicios</a></li>
+                    <li><a href="#">» Productos destacados</a></li>
+                    <li><a href="#">» Descuentos</a></li>
+                    <li><a href="#">» Productos recientes</a></li>
+                    <li><a href="#">» Descuentos por cantidad</a></li>
+                </ul>
+            </div>
+            <div class="footer-columna">
+                <h3 class="footer-titulo">Centro de ayuda</h3>
+                <ul class="footer-lista-enlaces">
+                    <li><a href="#">» Métodos de pago</a></li>
+                    <li><a href="#">» Métodos de envío</a></li>
+                    <li><a href="#">» Precios y tarifas</a></li>
+                    <li><a href="#">» Contactos de administración</a></li>
+                </ul>
+            </div>
+            <div class="footer-columna">
+                <h3 class="footer-titulo">Déjanos tu opinión para mejorar aún más en lo que hacemos</h3>
+                <form class="footer-formulario">
+                    <input type="email" placeholder="Email" class="footer-input">
+                    <button type="submit" class="footer-boton">Comentar</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-barra-inferior">
+            <div class="contenido-barra-inferior">
+                <img src="icon/logo-nuevo.png" alt="Logo Tu Maletín" class="footer-logo">
+                <p class="footer-copyright">Copyright © All Right Reserved</p>
+            </div>
+        </div>
     </footer>
 
-    <!-- Scripts de JavaScript (se mantienen) -->
     <script>
         // Lógica para la pantalla de carga
         window.onload = function() {
-            document.getElementById('pantalla-carga').classList.add('oculto');
+            const loader = document.getElementById('pantalla-carga');
+            loader.classList.add('oculto');
         };
 
         // Lógica para el menú móvil
         const botonNav = document.querySelector('.boton-nav');
         const mobileMenu = document.querySelector('.mobile-menu');
-        if (botonNav && mobileMenu) {
+
+        if(botonNav && mobileMenu) {
             botonNav.addEventListener('click', function() {
                 mobileMenu.classList.toggle('active');
                 this.classList.toggle('active');
@@ -187,7 +609,9 @@
             });
         }
     </script>
+
     <script src="script/fondo.js"></script>
     <script src="script/temp.js"></script>
 </body>
+
 </html>
