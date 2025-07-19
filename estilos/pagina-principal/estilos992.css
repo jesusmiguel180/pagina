@@ -1,0 +1,177 @@
+@media (max-width: 992px) {
+    /* ==================================================================== */
+    /*                        HEADER Y NAVEGACIÓN                         */
+    /* ==================================================================== */
+    body {
+        padding-top: 15%;
+    }
+
+    .logo {
+        height: 45px; /* Reducimos ligeramente la altura */
+    }
+
+    .segunda-barra {
+        flex-wrap: wrap;
+        gap: 15px; /* Ajuste para mejor espaciado */
+        justify-content: center;
+    }
+
+    .busqueda {
+        order: 1;
+        width: 90%;
+        margin: 0;
+    }
+
+    .busqueda input {
+        font-size: 14px;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .boton-nav {
+        display: block;
+        /* --- NUEVO ---: Añadimos la transición para el efecto hover */
+        transition: transform 0.3s ease;
+    }
+
+    /* --- NUEVO ---: Regla para el efecto hover */
+    .boton-nav:hover {
+        transform: scale(1.15); /* Mismo escalado que el carrito */
+    }
+
+    .carrito {
+        margin-right: 0;
+    }
+    
+    .mobile-menu.active {
+        margin-right: 320px;
+        margin-top: 10px;
+    }
+    .mobile-menu {
+        margin-right: 320px;
+        margin-top: 10px;
+    }
+    /* ==================================================================== */
+    /*                     SECCIÓN "SOBRE NOSOTROS"                       */
+    /* ==================================================================== */
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text-content {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    .about-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .benefits-list {
+        text-align: left;
+        margin: 30px auto;
+        max-width: 450px;
+    }
+
+    .cta-area {
+        justify-content: center;
+    }
+    
+    .image-collage-container {
+        position: relative; /* Lo mantenemos por si acaso, pero no es crucial para este método */
+        width: 100%;
+        max-width: 450px;
+        margin: 60px auto 0;
+        /* --- CAMBIO CLAVE ---: ELIMINAMOS la altura fija. El contenedor crecerá con el contenido. */
+        height: auto; 
+        perspective: none;
+    }
+
+    .collage-img {
+        /* --- CAMBIO CLAVE ---: Quitamos position: absolute y ajustamos el display */
+        position: static; /* Volvemos al flujo normal del documento */
+        display: block;   /* Aseguramos que cada imagen ocupe su propia línea */
+        margin-left: auto;  /* Centramos las imágenes */
+        margin-right: auto;
+        
+        width: 80%; /* Damos un ancho consistente */
+        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        border-radius: 8px; /* Mantenemos bordes redondeados */
+    }
+    
+    /* Imagen 1 (arriba, centrada) */
+    .img-1 {
+        z-index: 1; /* Estará debajo de las demás */
+    }
+
+    /* Imagen 2 (Se superpone a la primera) */
+    .img-2 {
+        /* --- CAMBIO CLAVE ---: Usamos margen negativo para subirla */
+        margin-top: -100px; /* Sube la imagen 100px. Ajusta este valor si quieres más o menos superposición */
+        margin-left: 0; /* La alineamos un poco a la izquierda para el efecto diagonal */
+        z-index: 2; /* Se pone por encima de la img-1 */
+    }
+
+    /* Imagen 3 (Se superpone a la segunda) */
+    .img-3 {
+        /* --- CAMBIO CLAVE ---: Usamos un margen negativo aún mayor */
+        margin-top: -120px; /* Sube la imagen 120px. Ajusta este valor */
+        margin-right: 0; /* La alineamos un poco a la derecha */
+        margin-left: auto; /* Anulamos el margin-left anterior */
+        z-index: 3; /* Se pone por encima de todas */
+    }
+    
+
+    /* ==================================================================== */
+    /*              SECCIÓN DE PRODUCTOS (LAYOUT DESKTOP)                 */
+    /* ==================================================================== */
+    
+    .promo-btn{
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .card-2 .promo-text{
+        margin-right: 20px;
+    }
+
+    .card-4 .promo-text{
+        margin-right: 20px;
+    } 
+
+    .card-1 .promo-image-container{
+        margin-right: 20px;
+    }
+
+    .promo-image-container-full img{
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    /* ==================================================================== */
+    /*                SECCIÓN DE DESCUENTOS (LAYOUT DESKTOP)              */
+    /* ==================================================================== */
+
+    
+    /* ==================================================================== */
+    /*                 SECCIÓN DE OFERTAS PROMOCIONALES                   */
+    /* ==================================================================== */
+    .promo-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+    
+    /* Reseteamos el posicionamiento de grid para que fluya */
+    .card-1, .card-2, .card-3, .card-4, .card-5 {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .card-3{
+        grid-column: 1 / -1;
+    }
+}

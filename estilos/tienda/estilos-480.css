@@ -1,0 +1,32 @@
+@media (max-width: 480px) {
+    
+
+    /* ==================================================================== */
+    /*                        HEADER Y NAVEGACIÓN                         */
+    /* ==================================================================== */
+    body {
+        padding-top: 140px;
+    }
+    
+    .nav-icono span {
+        display: none; /* Ocultamos el texto para ahorrar espacio */
+    }
+
+    /* ==================================================================== */
+    /*                        contenedor de productos                      */
+    /* ==================================================================== */
+    .contenido-principal { 
+        padding: 0 10px; 
+        gap: 20px; 
+    }
+
+    #contenedor-productos.vista-cuadricula {
+        /* --- REGLA ---: 2 columnas para los productos */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .opciones-filtro {
+        grid-template-columns: repeat(2, 1fr); /* Mantenemos 2 columnas para filtros */
+    }
+}
