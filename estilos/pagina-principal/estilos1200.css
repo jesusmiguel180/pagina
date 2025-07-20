@@ -1,0 +1,18 @@
+@media (max-width: 1200px) {
+    /* ==================================================================== */
+    /*                 SECCIÓN DE PRODUCTOS DESTACADOS                    */
+    /* ==================================================================== */
+    .seccion-productos .contenedor-tarjetas {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    /* ==================================================================== */
+    /*          SECCIONES DE PRODUCTOS DESCUENTOS          */
+    /* ==================================================================== */
+    .seccion-descuentos .contenedor-tarjetas {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .contenedor-descuentos {
+        /* ¡NUEVA REGLA! Rompemos el grid a una sola columna vertical */
+        grid-template-columns: 1fr;
+    }
+}
