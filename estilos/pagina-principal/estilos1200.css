@@ -5,11 +5,9 @@
     .seccion-productos .contenedor-tarjetas {
         grid-template-columns: repeat(4, 1fr);
     }
-
     /* ==================================================================== */
     /*          SECCIONES DE PRODUCTOS DESCUENTOS          */
     /* ==================================================================== */
-
     .seccion-descuentos .contenedor-tarjetas {
         grid-template-columns: repeat(4, 1fr);
     }

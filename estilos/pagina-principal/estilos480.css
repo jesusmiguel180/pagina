@@ -3,37 +3,31 @@
     /*                        HEADER Y NAVEGACIÓN                         */
     /* ==================================================================== */
     body {
-        padding-top: 30%; 
+        padding-top: 30%;
     }
-
     .segunda-barra {
         padding: 0 15px;
         gap: 10px;
     }
-
     .logo {
         height: 40px;
     }
-    
     .busqueda {
         width: 100%;
         order: 1;
         margin: 0;
     }
-    
-    .busqueda input{
+    .busqueda input {
         font-size: 12px;
     }
-
-    .boton-nav, .carrito {
+    .boton-nav,
+    .carrito {
         margin: 0;
     }
-    
     .mobile-menu {
         right: 15px;
         width: 220px;
     }
-    
     .mobile-menu.active {
         margin-right: 80px;
         margin-top: -10px;
@@ -46,10 +40,10 @@
     /*                      SECCIÓN DE CATEGORÍAS                         */
     /* ==================================================================== */
     .category-card {
-        flex-basis: calc(50% - 10px); /* 2 columnas */
+        flex-basis: calc(50% - 10px);
+        /* 2 columnas */
         max-width: calc(50% - 10px);
     }
-    
     /* ==================================================================== */
     /*                     SECCIÓN "SOBRE NOSOTROS"                       */
     /* ==================================================================== */
@@ -57,26 +51,22 @@
         /* Reducimos el padding para pantallas pequeñas */
         padding: 40px 15px;
     }
-    .about-heading{
+    .about-heading {
         font-size: 2rem;
     }
-
-
-    /* ==================================================================== */
-    /*                     promocional"                       */
-    /* ==================================================================== */
-    .card-5 img{
-        width: 600px;
-    }
-
-
     /* ==================================================================== */
     /*          SECCIONES DE PRODUCTOS DESTACADOS          */
     /* ==================================================================== */
-    .seccion-productos .contenedor-tarjetas{
+    .seccion-productos .contenedor-tarjetas {
         grid-template-columns: repeat(2, 1fr);
     }
-
+    .seccion-productos {
+        margin-top: 0px;
+        padding-top: 1%;
+    }
+    .seccion-productos .titulo-seccion{
+        font-size: 1.2rem;
+    }
     /* ==================================================================== */
     /*          SECCIONES DE PRODUCTOS DESCUENTOS           */
     /* ==================================================================== */
