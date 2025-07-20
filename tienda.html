@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda - Tu Maletín (Vista Previa)</title>
+    
+    <!-- Enlaces a todos tus archivos CSS -->
+    <link rel="stylesheet" href="estilos/temas.css">
+    <link rel="stylesheet" href="estilos/tienda/estilos-principal.css">
+    <link rel="stylesheet" href="estilos/tienda/estilos-992.css">
+    <link rel="stylesheet" href="estilos/tienda/estilos-768.css">
+    <link rel="stylesheet" href="estilos/tienda/estilos-480.css">
+    <link rel="stylesheet" href="estilos/tienda/estilos-380.css">
+    <link rel="stylesheet" href="estilos/colores.css">
+    <link rel="stylesheet" href="estilos/fondo.css">
+    <link rel="stylesheet" href="estilos/fondo-animado.css">
+    
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Fondo animado -->
+    <div id="animation-container"></div>
+
+    <!-- Cabecera de la Tienda -->
+    <header class="barra-superior">
+        <div class="segunda-barra">
+            <a href="index-es.html" class="logo">
+                <img src="icon/logoreal.svg" alt="Logo Tu Maletín">
+            </a>
+            <div class="busqueda">
+                <input class="entrada" type="search" id="busqueda-input" placeholder="Buscar en la tienda...">
+                <img src="icon/icono-buscar.svg" alt="Buscar">
+            </div>
+            <nav class="navegacion-tienda">
+                <a href="index-es.html" class="nav-icono" aria-label="Volver al inicio">
+                    <img src="icon/home.svg" alt="Inicio">
+                    <span>Inicio</span>
+                </a>
+                <a href="carrito.html" class="carrito nav-icono" aria-label="Ver carrito">
+                    <img src="icon/carrito.svg" alt="Carrito">
+                    <span class="contador-carrito">0</span>
+                    <span>Carrito</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido Principal de la Tienda -->
+    <main class="contenido-principal">
+        <!-- Panel de filtros lateral -->
+        <aside class="panel-filtros">
+            <h2 class="titulo-filtros">Filtros</h2>
+            <hr class="separador-filtros">
+            <div class="grupo-filtro">
+                <h3 class="subtitulo-filtro">Categorías</h3>
+                <div class="opciones-filtro" id="filtro-categorias">
+                    <!-- INICIO DEL CONTENIDO ESTÁTICO (reemplaza el bucle PHP) -->
+                    <label><input type="checkbox" name="categoria" value="animales"> Animales</label>
+                    <label><input type="checkbox" name="categoria" value="electrodomesticos"> Electrodomésticos</label>
+                    <label><input type="checkbox" name="categoria" value="aseo"> Aseo Personal</label>
+                    <label><input type="checkbox" name="categoria" value="ropa"> Ropa y Calzado</label>
+                    <label><input type="checkbox" name="categoria" value="tecnologia"> Tecnología</label>
+                    <label><input type="checkbox" name="categoria" value="miscelaneas"> Misceláneas</label>
+                    <!-- FIN DEL CONTENIDO ESTÁTICO -->
+                </div>
+            </div>
+            <hr class="separador-filtros">
+            <div class="grupo-filtro">
+                <h3 class="subtitulo-filtro">Rango de Precio</h3>
+                <div class="filtro-rango-precio">
+                    <input type="range" id="rango-precio" min="0" max="500" value="500">
+                    <div class="etiqueta-rango">Hasta: <span id="valor-rango">$500</span></div>
+                </div>
+            </div>
+            <hr class="separador-filtros">
+            <div class="grupo-filtro">
+                <h3 class="subtitulo-filtro">Ordenar Por</h3>
+                <select id="ordenar-por" class="selector-ordenar">
+                    <option value="recientes">Más Recientes</option>
+                    <option value="precio_asc">Precio: de menor a mayor</option>
+                    <option value="precio_desc">Precio: de mayor a menor</option>
+                    <option value="nombre_asc">Nombre: A-Z</option>
+                    <option value="nombre_desc">Nombre: Z-A</option>
+                </select>
+            </div>
+            <hr class="separador-filtros">
+            <div class="grupo-filtro">
+                <h3 class="subtitulo-filtro">Vista</h3>
+                <div class="vista-botones">
+                    <button id="vista-cuadricula" class="boton-vista activo" aria-label="Vista en cuadrícula">
+                        <img src="icon/cuadricula.svg" alt="Vista cuadrícula">
+                    </button>
+                    <button id="vista-lista" class="boton-vista" aria-label="Vista en lista">
+                        <img src="icon/filas.svg" alt="Vista lista">
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Contenedor de productos -->
+        <section class="escaparate-productos">
+            <div class="herramientas-escaparate">
+                <p class="conteo-productos">Mostrando <span id="num-productos">12</span> de <span id="total-productos">~150</span> productos</p>
+            </div>
+            <div id="contenedor-productos" class="vista-cuadricula">
+                <!-- INICIO DE PRODUCTOS DE EJEMPLO (reemplaza la carga dinámica) -->
+                <article class="tarjeta-producto-tienda" data-id="1">
+                    <div class="imagen-producto">
+                        <a href="#"><img src="imagenes/producto-ejemplo.png" alt="Producto de ejemplo"></a>
+                    </div>
+                    <div class="info-producto">
+                        <p class="categoria">Tecnología</p>
+                        <h4 class="nombre-producto"><a href="#">Auriculares Inalámbricos Pro</a></h4>
+                        <div class="precio-final"><span>Precio</span><span class="precio">$120.00</span></div>
+                    </div>
+                </article>
+                <article class="tarjeta-producto-tienda" data-id="2">
+                    <div class="imagen-producto">
+                        <a href="#"><img src="imagenes/producto-ejemplo.png" alt="Producto de ejemplo"></a>
+                    </div>
+                    <div class="info-producto">
+                        <p class="categoria">Ropa</p>
+                        <h4 class="nombre-producto"><a href="#">Camiseta de Algodón Orgánico</a></h4>
+                        <div class="precio-final"><span>Precio</span><span class="precio">$25.50</span></div>
+                    </div>
+                </article>
+                <article class="tarjeta-producto-tienda" data-id="3">
+                    <div class="imagen-producto">
+                        <a href="#"><img src="imagenes/producto-ejemplo.png" alt="Producto de ejemplo"></a>
+                    </div>
+                    <div class="info-producto">
+                        <p class="categoria">Electrodomésticos</p>
+                        <h4 class="nombre-producto"><a href="#">Cafetera Express Automática</a></h4>
+                        <div class="precio-final"><span>Precio</span><span class="precio">$89.99</span></div>
+                    </div>
+                </article>
+                <article class="tarjeta-producto-tienda" data-id="4">
+                    <div class="imagen-producto">
+                        <a href="#"><img src="imagenes/producto-ejemplo.png" alt="Producto de ejemplo"></a>
+                    </div>
+                    <div class="info-producto">
+                        <p class="categoria">Aseo Personal</p>
+                        <h4 class="nombre-producto"><a href="#">Set de Cuidado de Barba</a></h4>
+                        <div class="precio-final"><span>Precio</span><span class="precio">$35.00</span></div>
+                    </div>
+                </article>
+                <article class="tarjeta-producto-tienda" data-id="5">
+                    <div class="imagen-producto">
+                        <a href="#"><img src="imagenes/producto-ejemplo.png" alt="Producto de ejemplo"></a>
+                    </div>
+                    <div class="info-producto">
+                        <p class="categoria">Tecnología</p>
+                        <h4 class="nombre-producto"><a href="#">Teclado Mecánico Retroiluminado</a></h4>
+                        <div class="precio-final"><span>Precio</span><span class="precio">$75.00</span></div>
+                    </div>
+                </article>
+                <article class="tarjeta-producto-tienda" data-id="6">
+                    <div class="imagen-producto">
+                        <a href="#"><img src="imagenes/producto-ejemplo.png" alt="Producto de ejemplo"></a>
+                    </div>
+                    <div class="info-producto">
+                        <p class="categoria">Misceláneas</p>
+                        <h4 class="nombre-producto"><a href="#">Taza de Café Térmica</a></h4>
+                        <div class="precio-final"><span>Precio</span><span class="precio">$18.90</span></div>
+                    </div>
+                </article>
+                <article class="tarjeta-producto-tienda" data-id="7">
+                    <div class="imagen-producto">
+                        <a href="#"><img src="imagenes/producto-ejemplo.png" alt="Producto de ejemplo"></a>
+                    </div>
+                    <div class="info-producto">
+                        <p class="categoria">Ropa</p>
+                        <h4 class="nombre-producto"><a href="#">Zapatillas Urbanas de Lona</a></h4>
+                        <div class="precio-final"><span>Precio</span><span class="precio">$55.00</span></div>
+                    </div>
+                </article>
+                <article class="tarjeta-producto-tienda" data-id="8">
+                    <div class="imagen-producto">
+                        <a href="#"><img src="imagenes/producto-ejemplo.png" alt="Producto de ejemplo"></a>
+                    </div>
+                    <div class="info-producto">
+                        <p class="categoria">Electrodomésticos</p>
+                        <h4 class="nombre-producto"><a href="#">Freidora de Aire 5L</a></h4>
+                        <div class="precio-final"><span>Precio</span><span class="precio">$99.00</span></div>
+                    </div>
+                </article>
+                <!-- FIN DE PRODUCTOS DE EJEMPLO -->
+            </div>
+            
+            <div id="cargando-mas" class="cargando-oculto">
+                <div class="spinner"></div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Modal de Detalles del Producto -->
+    <div id="modal-producto" class="modal-superposicion">
+        <div class="modal-contenido">
+            <button id="modal-cerrar" class="modal-boton-cerrar" aria-label="Cerrar">×</button>
+            <div class="modal-cuerpo">
+                <div class="modal-columna-imagen">
+                    <img id="modal-imagen" src="" alt="Producto">
+                </div>
+                <div class="modal-columna-info">
+                    <p id="modal-categoria" class="modal-categoria"></p>
+                    <h2 id="modal-titulo" class="modal-titulo"></h2>
+                    <div id="modal-calificacion" class="estrellas-calificacion"></div>
+                    <p id="modal-descripcion" class="modal-descripcion"></p>
+                    <ul id="modal-detalles-lista" class="modal-lista-detalles"></ul>
+                    <div class="modal-footer">
+                        <span id="modal-precio" class="modal-precio"></span>
+                        <button class="modal-boton-anadir">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scripts de la aplicación -->
+    <!-- NOTA: Para GitHub Pages, el JS no podrá hacer fetch a los archivos PHP, -->
+    <!-- por lo que el scroll infinito no cargará más productos, pero la UI funcionará. -->
+    <script src="script/tienda/tienda.js"></script> 
+    <script src="script/fondo.js"></script>
+    <script src="script/modal-producto.js"></script>
+
+    <script>
+        // Lógica para la pantalla de carga
+        window.onload = function() {
+            // No hay loader en esta página, pero se mantiene por consistencia
+        };
+    </script>
+</body>
+</html>
