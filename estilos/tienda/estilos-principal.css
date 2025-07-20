@@ -1,0 +1,737 @@
+/* ==================================================================== */
+/*                   ESTILOS GENERALES Y FUENTES                        */
+/* ==================================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Winky Rough", sans-serif;
+}
+
+body {
+    padding-top: 80px;
+}
+
+/* animacion del fondo*/ 
+#animation-container {
+    position: fixed; /* Se queda fijo aunque la página tenga scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* ¡Importante! Lo manda al fondo de todo */
+    z-index: -1;
+}
+
+/* ==================================================================== */
+/*                       CABECERA FIJA DE LA TIENDA (RETOCADA)          */
+/* ==================================================================== */
+.barra-superior {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(93, 145, 182, 0.85); /* Color semitransparente */
+    z-index: 1000;
+    padding: 20px 0;
+    height: auto;
+    min-height: 110px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.segunda-barra {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    gap: 30px;
+}
+
+/* --- Logo --- */
+.logo {
+    display: block;
+    height: 70px;
+    margin-right: auto;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.logo:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 8px var(--color-blanco));
+}
+.logo img {
+    height: 100%;
+    display: block;
+}
+
+/* --- Barra de Búsqueda --- */
+.busqueda {
+    flex-grow: 1; /* Para que ocupe el espacio central */
+    display: flex;
+    align-items: center;
+    background: var(--color-fondo-claro);
+    border-radius: 50px;
+    border: none;
+    padding: 5px 10px 5px 20px;
+    height: 45px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.busqueda:hover,
+.busqueda:focus-within {
+    background-color: var(--color-blanco);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.entrada {
+    background: transparent;
+    border: none;
+    width: 100%;
+    padding-right: 10px;
+    outline: none;
+    font-size: 15px;
+}
+.busqueda img {
+    width: 28px;
+    height: 28px;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+.busqueda:hover img,
+.busqueda:focus-within img {
+    opacity: 1;
+}
+
+/* --- Iconos de Navegación --- */
+.navegacion-tienda {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.nav-icono {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    color: var(--color-blanco);
+    font-size: 0.8rem;
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease;
+    animation: pulso-icono 5s ease-in-out infinite;
+}
+.nav-icono:hover {
+    transform: scale(1.15); /* Efecto escalado */
+    color: var(--color-acento);
+    animation-play-state: paused;
+}
+.nav-icono:hover span {
+    color: var(--color-acento);
+}
+.nav-icono img {
+    width: 24px;
+    height: 24px;
+}
+.nav-icono span {
+    transition: color 0.3s ease;
+}
+.carrito {
+    animation-delay: 2.5s;
+}
+.contador-carrito {
+    position: absolute;
+    top: -5px;
+    right: 5px; /* Ajuste para centrar mejor */
+    background-color: var(--color-acento);
+    color: var(--color-blanco);
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==================================================================== */
+/*                       CONTENIDO PRINCIPAL (LAYOUT)                 */
+/* ==================================================================== */
+.contenido-principal {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+    /* --- CAMBIO CLAVE ---: Convertimos el layout principal en un grid de 4 columnas */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5%;
+    align-items: flex-start;
+}
+
+/* ==================================================================== */
+/*                          PANEL DE FILTROS                            */
+/* ==================================================================== */
+.panel-filtros {
+    grid-row: 1 / 100;
+    grid-column: 1 / 2;
+    background-color: var(--color-primario-claro);
+    background-image: repeating-linear-gradient( 45deg, rgba(255, 255, 255, 0.23), rgba(255, 255, 255, 0.23) 1px, transparent 1px, transparent 20px);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.6);
+    position: sticky;
+    top: 130px;
+}
+
+.grupo-filtro .selector-ordenar-contenedor {
+    position: relative;
+    display: block;
+}
+
+.titulo-filtros {
+    color: var(--color-blanco);
+}
+
+.subtitulo-filtro {
+    color: var(--color-acento);
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+.etiqueta-rango{
+    color: white;
+}
+
+/* --- AQUÍ ESTÁ LA BASE PARA ESCRITORIO --- */
+.opciones-filtro {
+    /* Por defecto (escritorio), se mantiene como una columna vertical */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.opciones-filtro label {
+    color: var(--color-texto-contraste-alto);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+.opciones-filtro label:hover {
+    color: var(--color-blanco);
+}
+.opciones-filtro input[type="checkbox"]{
+    width: 18px;
+    height: 18px;
+    accent-color: var(--color-acento);
+    cursor: pointer;
+}
+
+.separador-filtros {
+    border: 0;
+    border-top: 1px solid var(--color-blanco);
+    margin: 15px 0;
+}
+
+.selector-ordenar {
+    /* Apariencia y reseteo */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    padding: 12px 40px 12px 15px; /* Padding derecho para dejar espacio a la flecha */
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-texto-principal);
+    background-color: var(--color-fondo-claro);
+    cursor: pointer;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+}
+
+.selector-ordenar:hover {
+    background-color: var(--color-blanco);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Animación de la flecha cuando el select está activo */
+.grupo-filtro:focus-within::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+
+/* Estilos para los botones de vista, ahora dentro del panel */
+.vista-botones {
+    display: flex;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--color-primario-claro);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+    border-color: 2px solid black;
+}
+
+.vista-botones button {
+    flex-grow: 1; /* Para que ambos ocupen el 50% */
+    background: transparent;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* El icono dentro del botón */
+.vista-botones button img {
+    width: 20px;
+    height: 20px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(1.2) opacity(0.5); /* Icono blanco semitransparente */
+    transition: filter 0.3s ease;
+}
+
+/* Botón activo (seleccionado) */
+.vista-botones button.activo {
+    background-color: var(--color-acento);
+    box-shadow: 0 0 10px rgba(239, 71, 88, 0.5);
+}
+
+.vista-botones button.activo img {
+    filter: invert(100%) sepia(0%) saturate(100%) hue-rotate(0deg) brightness(2); /* Icono blanco brillante */
+}
+
+/* Efecto hover en el botón que no está activo */
+.vista-botones button:not(.activo):hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.vista-botones button:not(.activo):hover img {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(1.2) opacity(1); /* Icono se vuelve opaco */
+}
+
+/* Flecha del selector (creada con un pseudo-elemento) */
+.grupo-filtro::after {
+    content: '▼';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    color: var(--color-texto-secundario);
+    pointer-events: none; /* Para que el clic atraviese la flecha y llegue al select */
+    transition: transform 0.3s ease;
+}
+
+/* ==================================================================== */
+/*                       ESCAPARATE DE PRODUCTOS                        */
+/* ==================================================================== */
+.conteo-productos{
+    color: white;
+}
+
+.escaparate-productos {
+    width: 100%;
+    /* --- CAMBIO CLAVE ---: Hacemos que esta sección ocupe las 3 columnas restantes */
+    grid-column: 2 / 5;
+}
+
+.herramientas-escaparate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: var(--color-primario-claro);
+    border-radius: 8px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* --- CAMBIO ---: Ya no necesitamos mostrar los botones aquí */
+.herramientas-escaparate .vista-botones {
+    display: none;
+}
+
+#contenedor-productos.vista-cuadricula {
+    display: grid;
+    gap: 30px;
+    /* --- CAMBIO CLAVE ---: Grid interno de 3 columnas */
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.tarjeta-producto-tienda {
+    background-color: var(--color-blanco);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #E0E0E0; /* Borde sutil */
+}
+.tarjeta-producto-tienda:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.imagen-producto {
+    background-color: #8e8e8e; /* Fondo gris claro para la imagen */
+    padding: 20px;
+}
+.imagen-producto img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+}
+
+.info-producto {
+    padding: 20px;
+    text-align: left;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #E0E0E0; /* Línea separadora */
+}
+.info-producto .categoria {
+    font-size: 0.85rem;
+    color: var(--color-texto-secundario);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+.info-producto .nombre-producto a {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-texto-principal);
+    text-decoration: none;
+    line-height: 1.4;
+    display: block;
+    margin-bottom: 15px;
+}
+.info-producto .nombre-producto a:hover {
+    color: var(--color-primario);
+}
+
+/* Nuevo contenedor para el precio */
+.info-producto .precio-final {
+    margin-top: auto; /* Empuja el precio al fondo */
+    padding-top: 15px;
+    border-top: 1px solid #EAEAEA;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+}
+.info-producto .precio-final span {
+    color: var(--color-texto-secundario);
+}
+.info-producto .precio-final .precio {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-primario-oscuro);
+}
+/* ==================================================================== */
+/*                      ESTILOS DEL MODAL DE PRODUCTO                   */
+/* ==================================================================== */
+
+/* Capa de superposición (el fondo oscuro y difuminado) */
+.modal-superposicion {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px); /* Para Safari */
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    /* Oculto por defecto, con transición suave */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Clase para mostrar el modal */
+.modal-superposicion.modal-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Contenedor principal del contenido del modal */
+.modal-contenido {
+    background-color: var(--color-blanco);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 900px;
+    position: relative;
+    
+    /* Para el scroll */
+    max-height: 90vh; /* Máximo 90% de la altura de la ventana */
+    display: flex; /* Para que el contenido interno se estire */
+
+    /* Animación de entrada */
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+.modal-superposicion.modal-visible .modal-contenido {
+    transform: scale(1);
+}
+
+/* Botón para cerrar el modal */
+.modal-boton-cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: #aaa;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s, transform 0.2s;
+}
+.modal-boton-cerrar:hover {
+    color: var(--color-texto-principal);
+    transform: rotate(90deg);
+}
+
+/* Cuerpo del modal, con scroll interno */
+.modal-cuerpo {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* Columna de imagen más pequeña */
+    gap: 30px;
+    padding: 30px;
+    overflow-y: auto; /* ¡AQUÍ ESTÁ LA MAGIA DEL SCROLL! */
+}
+
+.modal-columna-imagen img {
+    width: 100%;
+    border-radius: 8px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.modal-columna-info {
+    display: flex;
+    flex-direction: column;
+}
+.modal-categoria {
+    color: var(--color-texto-secundario);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.modal-titulo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-texto-principal);
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+.modal-descripcion {
+    color: var(--color-texto-secundario);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Estilos para las estrellas de calificación */
+.estrellas-calificacion {
+    color: #ffc107; /* Color dorado para las estrellas */
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+.estrellas-calificacion .estrella-vacia {
+    color: #e0e0e0; /* Color para estrellas vacías */
+}
+
+/* Lista de detalles (peso, marca, etc.) */
+.modal-lista-detalles {
+    list-style: none;
+    padding: 15px 0;
+    margin-bottom: 20px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.modal-lista-detalles li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 0.95rem;
+}
+.modal-lista-detalles strong {
+    color: var(--color-texto-principal);
+    margin-right: 10px;
+}
+.modal-lista-detalles span {
+    color: var(--color-texto-secundario);
+}
+
+/* Pie del modal (precio y botón) */
+.modal-footer {
+    margin-top: auto; /* Empuja al fondo */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal-precio {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--color-primario);
+}
+.modal-boton-anadir {
+    background-color: var(--color-acento);
+    color: var(--color-blanco);
+    border: none;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.modal-boton-anadir:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(239, 71, 88, 0.4);
+}
+
+/* Para evitar el scroll de la página principal cuando el modal está abierto */
+body.modal-abierto {
+    overflow: hidden;
+}
+/* ==================================================================== */
+/*          NUEVO: ANIMACIONES SUTILES PARA DAR VIDA A LA PÁGINA        */
+/* ==================================================================== */
+
+/* -------------------------------------------------------------------- */
+/*           1. Animación de "Pulso" para Iconos de Navegación           */
+/* -------------------------------------------------------------------- */
+
+/* Definimos la animación del pulso */
+@keyframes pulso-icono {
+    0% {
+        transform: scale(1); /* Tamaño normal */
+    }
+    50% {
+        transform: scale(1.1); /* Ligeramente más grande */
+    }
+    100% {
+        transform: scale(1); /* Vuelve a la normalidad */
+    }
+}
+
+/* Aplicamos la animación a los iconos de la cabecera */
+.nav-icono {
+    /* La animación se llama 'pulso-icono', dura 5 segundos, es suave (ease-in-out)
+       y se repite infinitamente (infinite) */
+    animation: pulso-icono 5s ease-in-out infinite;
+}
+
+/* Para que no todos pulsen a la vez, añadimos un retraso al segundo icono */
+.nav-icono:nth-child(2) {
+    animation-delay: 2.5s; /* El segundo icono empieza la animación 2.5s más tarde */
+}
+
+/* Quitamos la animación de pulso al pasar el ratón para que el hover de escalado funcione sin conflictos */
+.nav-icono:hover {
+    animation-play-state: paused; /* Pausa la animación de pulso */
+    /* La regla 'transform: scale(1.1)' que ya tenías se encargará del hover */
+}
+
+/* -------------------------------------------------------------------- */
+/*           2. Animación de "Respiración" para Rango de Precio         */
+/* -------------------------------------------------------------------- */
+
+/* Definimos la animación de la sombra */
+@keyframes respirar-sombra {
+    0% {
+        box-shadow: 0 0 3px 0px var(--color-acento);
+    }
+    50% {
+        box-shadow: 0 0 8px 3px rgba(253, 216, 53, 0.5); /* Sombra más grande y semitransparente */
+    }
+    100% {
+        box-shadow: 0 0 3px 0px var(--color-acento);
+    }
+}
+
+/* Estilizamos la "bolita" del control deslizante (thumb) */
+/* Esto requiere prefijos para diferentes navegadores */
+input[type="range"]::-webkit-slider-thumb { /* Chrome, Safari, Opera */
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--color-acento);
+    border-radius: 50%;
+    border: 3px solid var(--color-blanco);
+    cursor: pointer;
+    margin-top: -6px; /* Ajuste vertical */
+    /* Aplicamos la animación de respiración */
+    animation: respirar-sombra 3s ease-in-out infinite;
+}
+
+input[type="range"]::-moz-range-thumb { /* Firefox */
+    width: 20px;
+    height: 20px;
+    background: var(--color-acento);
+    border-radius: 50%;
+    border: 3px solid var(--color-blanco);
+    cursor: pointer;
+    /* Aplicamos la animación de respiración */
+    animation: respirar-sombra 3s ease-in-out infinite;
+}
+
+/* -------------------------------------------------------------------- */
+/*           3. Animación de "Brillo Deslizante" para Botones           */
+/* -------------------------------------------------------------------- */
+
+/* Definimos la animación del brillo */
+@keyframes brillo-deslizante {
+    0% {
+        transform: translateX(-100%) skewX(-20deg); /* Empieza fuera, a la izquierda */
+    }
+    100% {
+        transform: translateX(200%) skewX(-20deg); /* Termina fuera, a la derecha */
+    }
+}
+
+/* Aplicamos la animación a los botones de vista */
+.vista-botones button {
+    position: relative; /* Necesario para posicionar el brillo */
+    overflow: hidden;   /* Oculta el brillo cuando está fuera del botón */
+}
+
+/* Creamos el pseudo-elemento que será el brillo */
+.vista-botones button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%; /* Ancho del brillo */
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    /* Aplicamos la animación */
+    animation: brillo-deslizante 4s linear infinite;
+    /* Retraso para que no empiecen al mismo tiempo */
+    animation-delay: 2s;
+}
+
+/* Le damos un retraso diferente al segundo botón */
+.vista-botones button:nth-child(2)::before {
+    animation-delay: 4s;
+}

@@ -1,0 +1,49 @@
+/* estilos/loader.css */
+
+/* Contenedor principal de la pantalla de carga */
+#pantalla-carga {
+    position: fixed; /* Se queda fijo en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100vw; /* 100% del ancho de la ventana */
+    height: 100vh; /* 100% de la altura de la ventana */
+    background-color: rgb(27, 69, 96); /* Mismo color que tu header para consistencia */
+    z-index: 9999; /* Se asegura de que esté por encima de todo */
+    
+    /* Usamos flexbox para centrar verticalmente el logo */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alineamos el inicio de la animación a la izquierda */
+
+    /* Transición para cuando se oculte */
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+}
+
+/* Clase que se añadirá con JavaScript cuando la página cargue */
+#pantalla-carga.oculto {
+    opacity: 0;
+    visibility: hidden; /* La ocultamos para que no interfiera con los clics */
+}
+
+/* El logo que se va a animar */
+.logo-loader {
+    height: 60px; /* Un tamaño adecuado para la animación */
+    position: relative; /* Necesario para que la animación funcione correctamente */
+    
+    /* Aplicamos la animación */
+    animation: moverLogo 3.5s linear infinite;
+}
+
+/* Definición de la animación */
+@keyframes moverLogo {
+    0% {
+        /* Empieza fuera de la pantalla, a la izquierda */
+        transform: translateX(-100%); 
+    }
+    100% {
+        /* Termina fuera de la pantalla, a la derecha */
+        transform: translateX(100vw);
+    }
+}
