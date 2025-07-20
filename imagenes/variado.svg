@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Elemento 1: Llave Inglesa (cruzada por detrás) -->
+  <!-- La dibujamos primero para que quede al fondo -->
+  <path d="M12.2 2.7l-7.4 7.4c-.8.8-.7 2.2.3 2.9l4.2 3.1c.9.7 2.3.6 3.1-.2l7.4-7.4c.8-.8.7-2.2-.3-2.9l-4.2-3.1c-.9-.7-2.3-.6-3.1.2Z"></path>
+  <path d="M11 5l3-3"></path>
+  <path d="M5.5 12.5l-1.8 2.3c-.5.6 0 1.5.8 1.5h2.5"></path>
+
+  <!-- Elemento 2: Camiseta (elemento central) -->
+  <path d="M20.38 3.46 16 2a2 2 0 0 0-1.54.74L10 8.5V21a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.2a2 2 0 0 0-.62-.74Z"></path>
+  <path d="M8 3H6a2 2 0 0 0-2 2v2"></path>
+
+  <!-- Elemento 3: Enchufe (superpuesto en una esquina) -->
+  <!-- Usamos fill="currentColor" para darle un toque de color sólido -->
+  <path d="M15 11h4v4h-4z" fill="currentColor"></path>
+  <path d="M16 11V9"></path>
+  <path d="M18 11V9"></path>
+</svg>
