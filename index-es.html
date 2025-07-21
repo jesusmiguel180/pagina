@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,13 +20,15 @@
     <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
 
     <!-- Estilos y Scripts para Mapa y Iconos -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <!-- necesario para el fondo -->
     <div id="animation-container"></div>
@@ -68,6 +71,7 @@
     <!-- seccion de categorias de productos -->
     <div class="container">
         <div class="categories-container">
+            <!-- INICIO DEL CONTENIDO ESTÁTICO DE CATEGORÍAS -->
             <a class="category-card" href="tienda.html">
                 <img src="imagenes/camiceta-bien.png" alt="Ropa" class="category-image">
                 <div class="category-info">
@@ -117,6 +121,7 @@
                     <p class="category-count">68 productos</p>
                 </div>
             </a>
+            <!-- FIN DEL CONTENIDO ESTÁTICO DE CATEGORÍAS -->
         </div>
     </div>
 
@@ -148,9 +153,9 @@
                 </div>
             </div>
             <div class="image-collage-container">
-                <img src="imagenes/frontal-tienda-1.jpg" alt="Frente de la tienda" class="collage-img img-1">
+                <img src="imagenes/collage3.jpg" alt="Frente de la tienda" class="collage-img img-1">
                 <img src="imagenes/almacen.jpeg" alt="Almacén de productos" class="collage-img img-2">
-                <img src="imagenes/collage3.jpg" alt="Productos en estantería" class="collage-img img-3">
+                <img src="imagenes/frontal-tienda-1.jpg" alt="Productos en estantería" class="collage-img img-3">
             </div>
         </div>
     </section>
@@ -181,7 +186,7 @@
             <article class="promo-card card-4 bg-yellow">
                 <div class="promo-text">
                     <p class="promo-subtitle">Avión</p>
-                    <h3 class="promo-title">Envía la libra en avión por $9</h3>
+                    <h3 class="promo-title">Envía la libra en avión por $6</h3>
                 </div>
                 <div class="promo-image-container">
                     <img src="imagenes/avion.png" alt="Avión de carga">
@@ -219,7 +224,7 @@
             </a>
             <a href="#" class="tarjeta-producto">
                 <div class="imagen-producto-contenedor">
-                    <img src="imagenes/refrigerador.png" alt="Producto Destacado 2">
+                    <img src="imagenes/banndia2.png" alt="Producto Destacado 2">
                 </div>
                 <div class="info-producto">
                     <h3 class="nombre-producto">Producto Ejemplo 2</h3>
@@ -233,7 +238,7 @@
             </a>
             <a href="#" class="tarjeta-producto">
                 <div class="imagen-producto-contenedor">
-                    <img src="imagenes/perfume.png" alt="Producto Destacado 3">
+                    <img src="imagenes/banndia3.png" alt="Producto Destacado 3">
                 </div>
                 <div class="info-producto">
                     <h3 class="nombre-producto">Producto Ejemplo 3</h3>
@@ -284,7 +289,7 @@
                 </div>
                 <div class="contenedor-tarjetas">
                     <a href="#" class="tarjeta-producto">
-                        <div class="imagen-producto-contenedor"><img src="imagenes/medicamentos.png" alt="Oferta 1"></div>
+                        <div class="imagen-producto-contenedor"><img src="imagenes/perfume.png" alt="Oferta 1"></div>
                         <div class="info-producto">
                             <p class="categoria-producto">Electrónica</p>
                             <h3 class="nombre-producto">Producto en Oferta 1</h3>
@@ -292,7 +297,7 @@
                         </div>
                     </a>
                     <a href="#" class="tarjeta-producto">
-                        <div class="imagen-producto-contenedor"><img src="imagenes/camiceta-bien.png" alt="Oferta 2"></div>
+                        <div class="imagen-producto-contenedor"><img src="imagenes/medicamentos.png" alt="Oferta 2"></div>
                         <div class="info-producto">
                             <p class="categoria-producto">Hogar</p>
                             <h3 class="nombre-producto">Producto en Oferta 2</h3>
@@ -300,7 +305,7 @@
                         </div>
                     </a>
                     <a href="#" class="tarjeta-producto">
-                        <div class="imagen-producto-contenedor"><img src="imagenes/banndia3.png" alt="Oferta 3"></div>
+                        <div class="imagen-producto-contenedor"><img src="imagenes/mueble.png" alt="Oferta 3"></div>
                         <div class="info-producto">
                             <p class="categoria-producto">Ropa</p>
                             <h3 class="nombre-producto">Producto en Oferta 3</h3>
@@ -314,13 +319,10 @@
 
     <!-- SECCIÓN DE ÚLTIMA COLECCIÓN DE PRODUCTOS -->
     <section class="seccion-productos" id="recientes">
-        <div class="encabezado-seccion">
-            <h2 class="titulo-seccion">Últimos productos agregados</h2>
-            <a href="tienda.html" class="enlace-ver-mas">Ver Más</a>
-        </div>
+        <h2 class="titulo-seccion">Últimos productos agregados</h2>
         <div class="contenedor-tarjetas">
             <a href="#" class="tarjeta-producto">
-                <div class="imagen-producto-contenedor"><img src="imagenes/mueble.png" alt="Reciente 1"></div>
+                <div class="imagen-producto-contenedor"><img src="imagenes/banndia5.png" alt="Reciente 1"></div>
                 <div class="info-producto">
                     <h3 class="nombre-producto">Producto Reciente 1</h3>
                     <p class="categoria-producto">Tecnología</p>
@@ -329,7 +331,7 @@
                 </div>
             </a>
             <a href="#" class="tarjeta-producto">
-                <div class="imagen-producto-contenedor"><img src="imagenes/banndia2.png" alt="Reciente 2"></div>
+                <div class="imagen-producto-contenedor"><img src="imagenes/camiceta-bien.png" alt="Reciente 2"></div>
                 <div class="info-producto">
                     <h3 class="nombre-producto">Producto Reciente 2</h3>
                     <p class="categoria-producto">Muebles</p>
@@ -338,7 +340,7 @@
                 </div>
             </a>
             <a href="#" class="tarjeta-producto">
-                <div class="imagen-producto-contenedor"><img src="imagenes/Electrónica.png" alt="Reciente 3"></div>
+                <div class="imagen-producto-contenedor"><img src="imagenes/refrigerador.png" alt="Reciente 3"></div>
                 <div class="info-producto">
                     <h3 class="nombre-producto">Producto Reciente 3</h3>
                     <p class="categoria-producto">Medicamentos</p>
@@ -347,7 +349,7 @@
                 </div>
             </a>
             <a href="#" class="tarjeta-producto">
-                <div class="imagen-producto-contenedor"><img src="imagenes/Comida.png" alt="Reciente 4"></div>
+                <div class="imagen-producto-contenedor"><img src="imagenes/Electrónica.png" alt="Reciente 4"></div>
                 <div class="info-producto">
                     <h3 class="nombre-producto">Producto Reciente 4</h3>
                     <p class="categoria-producto">Aseo Personal</p>
@@ -466,8 +468,11 @@
         // Lógica para la pantalla de carga
         window.onload = function () {
             const loader = document.getElementById('pantalla-carga');
-            loader.classList.add('oculto');
+            if(loader) {
+                loader.classList.add('oculto');
+            }
         };
+
         // Lógica para el menú móvil
         const botonNav = document.querySelector('.boton-nav');
         const mobileMenu = document.querySelector('.mobile-menu');
