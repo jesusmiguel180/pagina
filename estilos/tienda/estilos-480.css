@@ -1,0 +1,55 @@
+@media (max-width: 480px) {
+    /* ==================================================================== */
+    /*                        HEADER Y NAVEGACIÓN                         */
+    /* ==================================================================== */
+    body {
+        padding-top: 140px;
+    }
+    
+    .nav-icono span {
+        display: none; /* Ocultamos el texto para ahorrar espacio */
+    }
+
+    .logo{
+        height: 40px;
+    }
+
+    /* ==================================================================== */
+    /*                        contenedor de productos                      */
+    /* ==================================================================== */
+    .contenido-principal { 
+        
+        grid-template-columns: 1fr;
+        row-gap: 30px; /* Puedes ajustar este valor a tu gusto */
+        column-gap: 0;
+        display: block;
+    }
+
+    
+
+    #contenedor-productos.vista-cuadricula {
+        /* --- REGLA ---: 2 columnas para los productos */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .opciones-filtro {
+        grid-template-columns: repeat(2, 1fr); /* Mantenemos 2 columnas para filtros */
+    }
+    
+    .info-producto .precio-final .precio {
+        font-size: 1rem;
+    }
+
+    .info-producto .nombre-producto {
+        font-size: 1rem;
+    }
+
+    .info-producto{
+        padding: 3%;
+    }
+
+    .tarjeta-producto{
+        padding-bottom: 3%;
+    }
+}

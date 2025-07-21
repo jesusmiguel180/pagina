@@ -1,0 +1,182 @@
+@media (max-width: 768px) {
+    /* ==================================================================== */
+    /*                        HEADER Y NAVEGACIÓN                         */
+    /* ==================================================================== */
+    body {
+        padding-top: 25%;
+        /* Ajuste para el header más alto */
+    }
+    .logo {
+        height: 50px;
+        /* Un poco más pequeño */
+    }
+    .busqueda {
+        width: 90%;
+    }
+    .busqueda input {
+        font-size: 13px;
+    }
+    .mobile-menu.active {
+        margin-right: 315px;
+    }
+    .mobile-menu {
+        margin-right: 315px;
+    }
+    /* ==================================================================== */
+    /*                      SECCIÓN DE CATEGORÍAS                         */
+    /* ==================================================================== */
+    .category-card {
+        flex-basis: calc(33.33% - 20px);
+        /* 3 columnas */
+        max-width: calc(33.33% - 20px);
+    }
+    /* ==================================================================== */
+    /*                     SECCIÓN "SOBRE NOSOTROS"                       */
+    /* ==================================================================== */
+    .collage-img {
+        display: none;
+        /* Ocultamos el collage complejo en tablet para simplificar */
+    }
+    .image-collage-container {
+        position: relative;
+        /* Lo mantenemos por si acaso, pero no es crucial para este método */
+        width: 100%;
+        max-width: 450px;
+        margin: 60px auto 0;
+        /* --- CAMBIO CLAVE ---: ELIMINAMOS la altura fija. El contenedor crecerá con el contenido. */
+        height: auto;
+        perspective: none;
+    }
+    .collage-img {
+        /* --- CAMBIO CLAVE ---: Quitamos position: absolute y ajustamos el display */
+        position: static;
+        /* Volvemos al flujo normal del documento */
+        display: block;
+        /* Aseguramos que cada imagen ocupe su propia línea */
+        margin-left: auto;
+        /* Centramos las imágenes */
+        margin-right: auto;
+        width: 80%;
+        /* Damos un ancho consistente */
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        border-radius: 8px;
+        /* Mantenemos bordes redondeados */
+    }
+    /* Imagen 1 (arriba, centrada) */
+    .img-1 {
+        z-index: 1;
+        margin-top: -30px;
+        /* Estará debajo de las demás */
+    }
+    /* Imagen 2 (Se superpone a la primera) */
+    .img-2 {
+        /* --- CAMBIO CLAVE ---: Usamos margen negativo para subirla */
+        margin-top: -50px;
+        /* Sube la imagen 100px. Ajusta este valor si quieres más o menos superposición */
+        margin-left: 0;
+        /* La alineamos un poco a la izquierda para el efecto diagonal */
+        z-index: 2;
+        /* Se pone por encima de la img-1 */
+    }
+    /* Imagen 3 (Se superpone a la segunda) */
+    .img-3 {
+        /* --- CAMBIO CLAVE ---: Usamos un margen negativo aún mayor */
+        margin-top: -40px;
+        /* Sube la imagen 120px. Ajusta este valor */
+        margin-right: 0;
+        /* La alineamos un poco a la derecha */
+        margin-left: auto;
+        /* Anulamos el margin-left anterior */
+        z-index: 3;
+        /* Se pone por encima de todas */
+    }
+    /* ==================================================================== */
+    /*                 SECCIÓN DE OFERTAS PROMOCIONALES                   */
+    /* ==================================================================== */
+    .promo-text {
+        margin-right: auto;
+    }
+    .promo-grid {
+        display: flex;
+        /* Cambiamos a Flexbox para apilar */
+        flex-direction: column;
+        gap: 20px;
+    }
+    .card-4 {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .card-5 img {
+        width: 400px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .card-1 {
+        align-items: center;
+    }
+    .card-3 .promo-text {
+        margin-right: 0;
+    }
+    /* Nos aseguramos de que el texto no se encoja y tenga espacio */
+    .promo-card.card-4 .promo-text,
+    .promo-card.card-5 .promo-text {
+        flex-basis: 60%;
+        /* El texto ocupa el 60% del espacio */
+        flex-shrink: 0;
+        /* Evita que se encoja */
+    }
+    /* Le damos al contenedor de la imagen un tamaño fijo */
+    .promo-card.card-4 .promo-image-container,
+    .promo-card.card-5 .promo-image-container {
+        flex-basis: 40%;
+        /* La imagen ocupa el 40% del espacio */
+        flex-shrink: 0;
+        /* Evita que se encoja */
+        /* Centramos la imagen dentro de su contenedor */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /* Nos aseguramos de que la imagen se vea bien dentro de su contenedor */
+    .promo-card.card-4 .promo-image-container img {
+        max-width: 120%;
+        max-height: 140%;
+        object-fit: contain;
+    }
+    .promo-card.card-5 .promo-image-container img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+    /* ==================================================================== */
+    /*       SECCIONES DE PRODUCTOS DESTACADOS          */
+    /* ==================================================================== */
+    .contenedor-tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* ==================================================================== */
+    /*          SECCIONES DE PRODUCTOS DESCUENTOS           */
+    /* ==================================================================== */
+    .seccion-descuentos .contenedor-tarjetas {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    /* ==================================================================== */
+    /*          SECCIONES DE PRODUCTOS recientes           */
+    /* ==================================================================== */
+    /* ==================================================================== */
+    /*                REGLAS RESPONSIVAS PARA EL BANNER                     */
+    /* ==================================================================== */
+    /* Ajustes para tabletas y pantallas más grandes (a partir de 768px) */
+    @media (min-width: 768px) {
+        .contenedor-banner {
+            /* Los elementos se ponen en fila, uno al lado del otro */
+            flex-direction: row;
+            text-align: left;
+            gap: 50px;
+        }
+        .banner-contenido {
+            /* Alineamos el contenido a la izquierda en pantallas grandes */
+            align-items: flex-start;
+        }
+    }
+}

@@ -1,0 +1,121 @@
+@media (max-width: 480px) {
+    /* ==================================================================== */
+    /*                        HEADER Y NAVEGACIÓN                         */
+    /* ==================================================================== */
+    body {
+        padding-top: 40%;
+    }
+    .segunda-barra {
+        padding: 0 15px;
+        gap: 10px;
+    }
+    .logo {
+        height: 40px;
+    }
+    .busqueda {
+        width: 100%;
+        order: 1;
+        margin: 0;
+    }
+    .busqueda input {
+        font-size: 12px;
+    }
+    .boton-nav,
+    .carrito {
+        margin: 0;
+    }
+    .mobile-menu {
+        right: 15px;
+        width: 220px;
+    }
+    .mobile-menu.active {
+        margin-right: 80px;
+        margin-top: -10px;
+    }
+    .mobile-menu {
+        margin-right: 80px;
+        margin-top: -10px;
+    }
+
+    .barra-superior{
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.452);
+    }
+    /* ==================================================================== */
+    /*                      SECCIÓN DE CATEGORÍAS                         */
+    /* ==================================================================== */
+    .category-card {
+        flex-basis: calc(50% - 10px);
+        /* 2 columnas */
+        max-width: calc(50% - 10px);
+    }
+
+    .categories-container{
+        padding: 2%;
+        padding-top: 5%;
+    }
+    /* ==================================================================== */
+    /*                     SECCIÓN "SOBRE NOSOTROS"                       */
+    /* ==================================================================== */
+    .about-section {
+        /* Reducimos el padding para pantallas pequeñas */
+        padding: 40px 15px;
+    }
+    .about-heading {
+        font-size: 2rem;
+    }
+    
+    /* ==================================================================== */
+    /*          SECCIONES DE promocion        */
+    /* ==================================================================== */
+    .promo-section{
+        padding: 2%;
+    }
+
+    .info-producto .nombre-producto {
+        font-size: 0.7rem;
+    }
+
+    .info-producto{
+        padding: 3%;
+    }
+
+    .tarjeta-producto{
+        padding-bottom: 3%;
+    }
+
+    /* ==================================================================== */
+    /*          SECCIONES DE PRODUCTOS DESTACADOS          */
+    /* ==================================================================== */
+    
+    .seccion-productos .contenedor-tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .seccion-productos {
+        margin-top: 0px;
+        padding: 2%;
+    }
+    .seccion-productos .titulo-seccion{
+        font-size: 1.2rem;
+    }
+    /* ==================================================================== */
+    /*          SECCIONES DE PRODUCTOS DESCUENTOS           */
+    /* ==================================================================== */
+    .seccion-descuentos .contenedor-tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .seccion-descuentos{
+        padding: 2%;
+    }
+
+
+     /* ==================================================================== */
+    /*          SECCIONES DE comentarios           */
+    /* ==================================================================== */
+    
+    .contenedor-testimonios{
+        gap: 10px;
+    }
+
+    
+}

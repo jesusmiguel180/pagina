@@ -1,0 +1,41 @@
+/* ==================================================================== */
+/*                   DEFINICIÓN DE TEMAS Y COLORES                      */
+/* ==================================================================== */
+
+/* Usamos la pseudo-clase :root para declarar variables globales */
+:root {
+    /* Tema "Bandera Cubana" (por defecto) */
+    
+    /* Azul de la bandera: para fondos principales, cabeceras, etc. */
+    --color-primario: #35559e; 
+    --color-primario-claro: #395eb5; 
+    --color-primario-oscuro: #192b73;
+    --color-semitransparente: #294da2b4;
+    
+    --color-texto-contraste-alto: #FFFFFF;
+    /* Rojo de la bandera: para botones, enlaces activos, acentos importantes. */
+    --color-acento: #ef4758;
+
+    /* Blanco: para fondos de secciones y texto sobre fondos oscuros. */
+    --color-blanco: #FFFFFF;
+    
+    /* Colores neutrales para el resto de la interfaz */
+    --color-texto-principal: #333333; /* Texto sobre fondos claros */
+    --color-texto-secundario: #6c757d; /* Texto más sutil (categorías, etc.) */
+    --color-fondo-claro: #f4f7f6; /* Fondo general de la página */
+    --color-borde: #5a5a5a; /* Bordes suaves */
+}
+
+/* 
+   Futuro: Si quieres un tema oscuro, podrías añadir esto y cambiarlo con JavaScript:
+   
+   body.tema-oscuro {
+       --color-primario: #111;
+       --color-acento: #E53935;
+       --color-blanco: #1a1a1a;
+       --color-texto-principal: #f0f0f0;
+       --color-texto-secundario: #aaa;
+       --color-fondo-claro: #222;
+       --color-borde: #444;
+   }
+*/

@@ -1,0 +1,71 @@
+@media (max-width: 992px) {
+    
+    /* ==================================================================== */
+    /*                        HEADER Y NAVEGACIÓN                         */
+    /* ==================================================================== */
+    body {
+        padding-top: 150px; /* Espacio para cabecera de 2 filas */
+    }
+
+    .segunda-barra {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    .barra-superior{
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.577);
+        margin-bottom: -50px;
+    }
+    .logo {
+        height: 60px;
+    }
+    .busqueda {
+        order: 1; /* Manda la búsqueda a la siguiente línea */
+        width: 100%;
+        margin-top: 10px;
+    }
+    /* El contenedor de los iconos ahora se centra */
+    .navegacion-tienda {
+        order: 0; /* Asegura que se quede arriba */
+    }
+
+    /* ==================================================================== */
+    /*                       contenedor de productos                       */
+    /* ==================================================================== */
+    .contenido-principal {
+        padding: 2%;
+        /* --- CAMBIO ---: El layout principal vuelve a ser de una columna */
+        grid-template-columns: 1fr;
+        row-gap: 30px; /* Puedes ajustar este valor a tu gusto */
+        column-gap: 0;
+        display: block;
+    }
+
+
+    .escaparate-productos {
+        /* --- CAMBIO ---: Ya no necesita estar en una columna específica del grid */
+        grid-column: auto;
+        margin-top: 10px;
+    }
+
+    /* estilos del panel de filtrado */ 
+    .panel-filtros {
+        position: static;
+        width: 100%;
+        margin-top: 1%;
+        box-shadow: 0 15px 15px rgba(0, 0, 0, 0.6); /* Sombra más sutil */
+    }
+
+    .opciones-filtro {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas para categorías */
+        gap: 15px;
+    }
+
+    #contenedor-productos.vista-cuadricula {
+        /* --- CAMBIO ---: 3 columnas para los productos */
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
