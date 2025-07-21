@@ -81,7 +81,7 @@ body {
     left: 0;
     width: 100%;
     background-color: var(--color-primario);
-    
+    z-index: 100;
     padding: 20px 0;
     height: auto;
     min-height: 120px;
