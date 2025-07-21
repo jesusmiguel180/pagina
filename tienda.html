@@ -60,14 +60,12 @@
             <div class="grupo-filtro">
                 <h3 class="subtitulo-filtro">Categorías</h3>
                 <div class="opciones-filtro" id="filtro-categorias">
-                    <!-- INICIO DEL CONTENIDO ESTÁTICO (reemplaza el bucle PHP) -->
                     <label><input type="checkbox" name="categoria" value="animales"> Animales</label>
                     <label><input type="checkbox" name="categoria" value="electrodomesticos"> Electrodomésticos</label>
                     <label><input type="checkbox" name="categoria" value="aseo"> Aseo Personal</label>
                     <label><input type="checkbox" name="categoria" value="ropa"> Ropa y Calzado</label>
                     <label><input type="checkbox" name="categoria" value="tecnologia"> Tecnología</label>
                     <label><input type="checkbox" name="categoria" value="miscelaneas"> Misceláneas</label>
-                    <!-- FIN DEL CONTENIDO ESTÁTICO -->
                 </div>
             </div>
             <hr class="separador-filtros">
@@ -106,13 +104,13 @@
         <!-- Contenedor de productos -->
         <section class="escaparate-productos">
             <div class="herramientas-escaparate">
-                <p class="conteo-productos">Mostrando <span id="num-productos">12</span> de <span id="total-productos">~150</span> productos</p>
+                <p class="conteo-productos">Mostrando <span id="num-productos">8</span> de <span id="total-productos">~150</span> productos</p>
             </div>
             <div id="contenedor-productos" class="vista-cuadricula">
-                <!-- INICIO DE PRODUCTOS DE EJEMPLO (reemplaza la carga dinámica) -->
+                <!-- INICIO DE PRODUCTOS DE EJEMPLO CON IMÁGENES ALEATORIAS -->
                 <article class="tarjeta-producto-tienda" data-id="1">
                     <div class="imagen-producto">
-                        <a href="#"><img src="imagenes/producto-ejemplo.png" alt="Producto de ejemplo"></a>
+                        <a href="#"><img src="imagenes/banndia1.png" alt="Producto de ejemplo 1"></a>
                     </div>
                     <div class="info-producto">
                         <p class="categoria">Tecnología</p>
@@ -122,7 +120,7 @@
                 </article>
                 <article class="tarjeta-producto-tienda" data-id="2">
                     <div class="imagen-producto">
-                        <a href="#"><img src="imagenes/producto-ejemplo.png" alt="Producto de ejemplo"></a>
+                        <a href="#"><img src="imagenes/camiceta-bien.png" alt="Producto de ejemplo 2"></a>
                     </div>
                     <div class="info-producto">
                         <p class="categoria">Ropa</p>
@@ -132,7 +130,7 @@
                 </article>
                 <article class="tarjeta-producto-tienda" data-id="3">
                     <div class="imagen-producto">
-                        <a href="#"><img src="imagenes/producto-ejemplo.png" alt="Producto de ejemplo"></a>
+                        <a href="#"><img src="imagenes/refrigerador.png" alt="Producto de ejemplo 3"></a>
                     </div>
                     <div class="info-producto">
                         <p class="categoria">Electrodomésticos</p>
@@ -142,7 +140,7 @@
                 </article>
                 <article class="tarjeta-producto-tienda" data-id="4">
                     <div class="imagen-producto">
-                        <a href="#"><img src="imagenes/producto-ejemplo.png" alt="Producto de ejemplo"></a>
+                        <a href="#"><img src="imagenes/perfume.png" alt="Producto de ejemplo 4"></a>
                     </div>
                     <div class="info-producto">
                         <p class="categoria">Aseo Personal</p>
@@ -152,7 +150,7 @@
                 </article>
                 <article class="tarjeta-producto-tienda" data-id="5">
                     <div class="imagen-producto">
-                        <a href="#"><img src="imagenes/producto-ejemplo.png" alt="Producto de ejemplo"></a>
+                        <a href="#"><img src="imagenes/banndia5.png" alt="Producto de ejemplo 5"></a>
                     </div>
                     <div class="info-producto">
                         <p class="categoria">Tecnología</p>
@@ -162,7 +160,7 @@
                 </article>
                 <article class="tarjeta-producto-tienda" data-id="6">
                     <div class="imagen-producto">
-                        <a href="#"><img src="imagenes/producto-ejemplo.png" alt="Producto de ejemplo"></a>
+                        <a href="#"><img src="imagenes/medicamentos.png" alt="Producto de ejemplo 6"></a>
                     </div>
                     <div class="info-producto">
                         <p class="categoria">Misceláneas</p>
@@ -172,7 +170,7 @@
                 </article>
                 <article class="tarjeta-producto-tienda" data-id="7">
                     <div class="imagen-producto">
-                        <a href="#"><img src="imagenes/producto-ejemplo.png" alt="Producto de ejemplo"></a>
+                        <a href="#"><img src="imagenes/mueble.png" alt="Producto de ejemplo 7"></a>
                     </div>
                     <div class="info-producto">
                         <p class="categoria">Ropa</p>
@@ -182,7 +180,7 @@
                 </article>
                 <article class="tarjeta-producto-tienda" data-id="8">
                     <div class="imagen-producto">
-                        <a href="#"><img src="imagenes/producto-ejemplo.png" alt="Producto de ejemplo"></a>
+                        <a href="#"><img src="imagenes/banndia3.png" alt="Producto de ejemplo 8"></a>
                     </div>
                     <div class="info-producto">
                         <p class="categoria">Electrodomésticos</p>
@@ -223,14 +221,12 @@
     </div>
     
     <!-- Scripts de la aplicación -->
-    <!-- NOTA: Para GitHub Pages, el JS no podrá hacer fetch a los archivos PHP, -->
-    <!-- por lo que el scroll infinito no cargará más productos, pero la UI funcionará. -->
-    <script src="script/tienda/tienda.jss"></script> 
+    <script src="script/tienda/tienda.js"></script> 
     <script src="script/fondo.js"></script>
     <script src="script/modal-producto.js"></script>
 
     <script>
-        // Lógica para la pantalla de carga
+        // Lógica para la pantalla de carga (si tuvieras una)
         window.onload = function() {
             // No hay loader en esta página, pero se mantiene por consistencia
         };
